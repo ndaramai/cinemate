@@ -118,7 +118,7 @@ body {
   padding: 0;
 }
 
-/* Fix for tab content display */
+/*  tab content display */
 .tab-content {
   display: none;
   margin: 0;
@@ -161,7 +161,7 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   flex: 0 0 200px;
   margin: 0;
-  height: 380px; /* Fixed height to ensure consistent spacing */
+  height: 380px; 
 }
 .movie-card:hover {
   transform: translateY(-5px) scale(1.02);
@@ -197,7 +197,7 @@ body {
   padding: 10px;
   text-align: center;
   width: 100%;
-  height: 80px; /* Fixed height for info section */
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,7 +206,7 @@ body {
   margin-bottom: 5px;
   font-size: 0.95rem;
   line-height: 1.2;
-  max-height: 2.4em; /* Limit to 2 lines */
+  max-height: 2.4em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -218,7 +218,7 @@ body {
   color: #555;
 }
 
-/* Featured Movie Section (Unified details) */
+/* Featured Movie Section */
 .featured-movie-section {
   max-width: 1200px;
   margin: 20px auto 0;
@@ -483,8 +483,6 @@ body {
   margin-top: 20px;
 }
 
-/* Add these styles to your style.css file */
-
 /* Watchlist Section */
 .watchlist-section {
   max-width: 1200px;
@@ -513,7 +511,6 @@ body {
 }
 
 /* Watchlist card styling */
-/* Watchlist card styling */
 .watchlist-card {
   background-color: #fff;
   border-radius: 8px;
@@ -525,7 +522,7 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   flex: 0 0 200px;
   margin: 0;
-  height: 430px; /* Increased height for watch now button and title */
+  height: 430px;
   position: relative;
   cursor: pointer;
 }
@@ -564,7 +561,7 @@ body {
   padding: 10px;
   text-align: center;
   width: 100%;
-  height: 80px; /* Increased height for title area */
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -574,11 +571,11 @@ body {
   margin-bottom: 5px;
   font-size: 0.95rem;
   line-height: 1.3;
-  max-height: 3.9em; /* Increased to allow for 3 lines of text */
+  max-height: 3.9em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Allow up to 3 lines for title */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -696,7 +693,6 @@ body {
     font-size: 0.75rem;
   }
 }
-/* Add these styles to your style.css file */
 
 /* For You Section */
 .for-you-section {
@@ -1134,7 +1130,6 @@ body {
   }
 }
 
-/* Responsive Styles */
 
 /* Tablets and Small Desktops */
 @media (max-width: 768px) {

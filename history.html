@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="styles/history.css">
   </head>
 <body>
-  <!-- Header / Navigation -->
   <header class="header">
     <div class="header-content">
       <div class="logo">CineMate</div>
@@ -33,7 +32,6 @@
     </div>
   </header>
 
-  <!-- History Section -->
   <section class="history-section">
     <h2>Your History</h2>
     
@@ -56,44 +54,35 @@
     </div>
     
     <div id="history-container" class="history-container">
-      <!-- History will be populated here by JavaScript -->
       <div class="loading">Loading your activity history...</div>
     </div>
   </section>
   
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modified: <span id="last-modification"></span></p>
   </footer>
 
-  <!-- History JavaScript -->
   <script src="scripts/history.js"></script>
-  
-  <!-- Track search functionality -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const searchInput = document.getElementById('search-input');
       const searchButton = document.getElementById('search-button');
       
-      // Track search action
       function trackSearch() {
         const query = searchInput.value.trim();
         if (query) {
-          // Add to history
+
           addToHistory({
             action: 'search',
             title: `Search: "${query}"`,
             details: `Searched for ${query}`
           });
           
-          // Here you would normally redirect to search results
-          // For demo purposes we'll just clear the input
           searchInput.value = '';
           showToast('Search recorded in history');
         }
       }
       
-      // Set up event listeners
       if (searchButton) {
         searchButton.addEventListener('click', trackSearch);
       }
@@ -106,7 +95,6 @@
         });
       }
       
-      // Toast notification function
       function showToast(message) {
         let toast = document.getElementById('toast-notification');
         

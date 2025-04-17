@@ -1,10 +1,7 @@
 // scripts/gowatch-api.js
 import { GOWATCH_HOST, GOWATCH_KEY } from './api-keys.js';
 
-/**
- * Given a TMDb movie ID, ask GoWatch what streaming providers carry it.
- * Returns the JSON response from GoWatch.
- */
+
 export async function lookupGoWatch(tmdbId, country = 'us') {
   const url = `https://${GOWATCH_HOST}/lookup/title/tmdb_id`;
   const form = new URLSearchParams();

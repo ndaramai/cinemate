@@ -34,14 +34,10 @@
     </div>
   </header>
 
-  <!-- For You Section -->
   <section class="foryou-section" style="max-width:1200px; margin:20px auto; padding:0 20px;">
     <h2>For You</h2>
-    
-    <!-- Categories Toggle / My Preferences -->
     <button class="categories-toggle" id="preferencesToggle">My Preferences</button>
 
-    <!-- Genre Buttons -->
     <div class="genre-container" id="genreButtons">
       <button class="genre-button active" data-category="All">All</button>
       <button class="genre-button" data-category="Action">Action</button>
@@ -65,7 +61,6 @@
       <button class="genre-button" data-category="Western">Western</button>
     </div>
 
-    <!-- Additional Preferences -->
     <div class="preferences-settings">
       <label for="minRating">Min Rating:</label>
       <input type="number" id="minRating" min="0" max="10" step="0.1" placeholder="0">
@@ -76,13 +71,10 @@
       <button id="applyPreferences">Apply Preferences</button>
     </div>
 
-    <!-- Movies Grid -->
     <div id="foryou-movies" class="movies-grid">
-      <!-- JS will populate this -->
     </div>
   </section>
 
-  <!-- Movie Details Modal Dialog -->
   <div id="movieDialog" class="modal">
     <div class="modal-content">
       <span id="modalClose" class="close">&times;</span>
@@ -96,7 +88,7 @@
           <p class="dialog-overview"></p>
           <h3>Description</h3>
           <p class="dialog-description"></p>
-          <!-- NEW BUTTONS -->
+
           <div class="dialog-buttons">
             <button id="dialogAddWatchlist">Add to Watchlist</button>
             <button id="dialogMarkWatched">Mark as Watched</button>

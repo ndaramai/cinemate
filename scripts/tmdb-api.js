@@ -4,7 +4,7 @@ import { TMDB_BEARER } from './api-keys.js';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 
 /**
- * Search TMDb for movies matching `query`.
+ * Search TMDb for movies.
  * Returns an array of movie objects.
  */
 export async function searchTmdbMovies(query) {

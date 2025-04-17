@@ -1,5 +1,4 @@
-// Add this code to foryou.js, watchlist.js, details-dialog.js, and where-to-watch.js
-// to track user actions across the CineMate application
+
 
 /**
  * Add history tracking to CineMate
@@ -139,7 +138,7 @@ function trackSearch(query) {
   });
 }
 
-// Example implementation in foryou.js:
+
 // Update the movie details dialog function:
 function openMovieDetails(movieId) {
   // Existing code...
@@ -155,7 +154,7 @@ function openMovieDetails(movieId) {
     });
 }
 
-// Example implementation in watchlist.js:
+
 // Update the addToWatchlist function:
 function addToWatchlist(movie) {
   // Existing code to add to watchlist...
@@ -164,7 +163,7 @@ function addToWatchlist(movie) {
   trackAddToWatchlist(movie);
 }
 
-// Example implementation in where-to-watch.js:
+
 // Add this to the init function:
 function init() {
   // Existing code...

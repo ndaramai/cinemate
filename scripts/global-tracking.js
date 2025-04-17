@@ -1,6 +1,4 @@
-// Global tracking functionality for CineMate
-// Include this script in all pages to enable history tracking
-
+//
 /**
  * Initialize the history tracking system
  */
