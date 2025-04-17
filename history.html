@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate - History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate - History">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate/history.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/history.css">
+  </head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="for-you.html">For You</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="history.html" class="active">History</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" id="search-input">
+        <button id="search-button">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- History Section -->
+  <section class="history-section">
+    <h2>Your History</h2>
+    
+    <div class="history-controls">
+      <div class="history-filter-container">
+        <label for="history-filter">Filter by:</label>
+        <select id="history-filter" class="history-filter">
+          <option value="all">All Activity</option>
+          <option value="search">Searches</option>
+          <option value="watchlist_add">Added to Watchlist</option>
+          <option value="watchlist_remove">Removed from Watchlist</option>
+          <option value="watched">Marked as Watched</option>
+          <option value="unwatched">Marked as Unwatched</option>
+          <option value="details_view">Movie Details</option>
+          <option value="where_to_watch">Where to Watch</option>
+        </select>
+      </div>
+      
+      <button id="clear-history-btn" class="clear-history-btn">Clear History</button>
+    </div>
+    
+    <div id="history-container" class="history-container">
+      <!-- History will be populated here by JavaScript -->
+      <div class="loading">Loading your activity history...</div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modified: <span id="last-modification"></span></p>
+  </footer>
+
+  <!-- History JavaScript -->
+  <script src="scripts/history.js"></script>
+  
+  <!-- Track search functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('search-input');
+      const searchButton = document.getElementById('search-button');
+      
+      // Track search action
+      function trackSearch() {
+        const query = searchInput.value.trim();
+        if (query) {
+          // Add to history
+          addToHistory({
+            action: 'search',
+            title: `Search: "${query}"`,
+            details: `Searched for ${query}`
+          });
+          
+          // Here you would normally redirect to search results
+          // For demo purposes we'll just clear the input
+          searchInput.value = '';
+          showToast('Search recorded in history');
+        }
+      }
+      
+      // Set up event listeners
+      if (searchButton) {
+        searchButton.addEventListener('click', trackSearch);
+      }
+      
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') {
+            trackSearch();
+          }
+        });
+      }
+      
+      // Toast notification function
+      function showToast(message) {
+        let toast = document.getElementById('toast-notification');
+        
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'toast-notification';
+          toast.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(213, 31, 38, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            z-index: 1500;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-weight: bold;
+          `;
+          document.body.appendChild(toast);
+        }
+        
+        toast.textContent = message;
+        toast.style.opacity = '1';
+        
+        setTimeout(() => {
+          toast.style.opacity = '0';
+        }, 3000);
+      }
+    });
+  </script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/history.js"></script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/search.js"></script>
+
+</body>
+</html>

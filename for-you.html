@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate - For You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate - For You">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate/foryou.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/foryou.css">
+    <link rel="stylesheet" href="styles/details-dialog.css">
+  </head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="for-you.html" class="active">For You</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="history.html">History</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- For You Section -->
+  <section class="foryou-section" style="max-width:1200px; margin:20px auto; padding:0 20px;">
+    <h2>For You</h2>
+    
+    <!-- Categories Toggle / My Preferences -->
+    <button class="categories-toggle" id="preferencesToggle">My Preferences</button>
+
+    <!-- Genre Buttons -->
+    <div class="genre-container" id="genreButtons">
+      <button class="genre-button active" data-category="All">All</button>
+      <button class="genre-button" data-category="Action">Action</button>
+      <button class="genre-button" data-category="Adventure">Adventure</button>
+      <button class="genre-button" data-category="Animation">Animation</button>
+      <button class="genre-button" data-category="Comedy">Comedy</button>
+      <button class="genre-button" data-category="Crime">Crime</button>
+      <button class="genre-button" data-category="Documentary">Documentary</button>
+      <button class="genre-button" data-category="Drama">Drama</button>
+      <button class="genre-button" data-category="Family">Family</button>
+      <button class="genre-button" data-category="Fantasy">Fantasy</button>
+      <button class="genre-button" data-category="History">History</button>
+      <button class="genre-button" data-category="Horror">Horror</button>
+      <button class="genre-button" data-category="Music">Music</button>
+      <button class="genre-button" data-category="Mystery">Mystery</button>
+      <button class="genre-button" data-category="Romance">Romance</button>
+      <button class="genre-button" data-category="Scifi">Science Fiction</button>
+      <button class="genre-button" data-category="Tvmovie">TV Movie</button>
+      <button class="genre-button" data-category="Thriller">Thriller</button>
+      <button class="genre-button" data-category="War">War</button>
+      <button class="genre-button" data-category="Western">Western</button>
+    </div>
+
+    <!-- Additional Preferences -->
+    <div class="preferences-settings">
+      <label for="minRating">Min Rating:</label>
+      <input type="number" id="minRating" min="0" max="10" step="0.1" placeholder="0">
+      <label for="fromYear">From Year:</label>
+      <input type="number" id="fromYear" placeholder="1900">
+      <label for="toYear">To Year:</label>
+      <input type="number" id="toYear" placeholder="2100">
+      <button id="applyPreferences">Apply Preferences</button>
+    </div>
+
+    <!-- Movies Grid -->
+    <div id="foryou-movies" class="movies-grid">
+      <!-- JS will populate this -->
+    </div>
+  </section>
+
+  <!-- Movie Details Modal Dialog -->
+  <div id="movieDialog" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="close">&times;</span>
+      <div class="modal-body">
+        <div class="dialog-poster"></div>
+        <div class="dialog-info">
+          <h2 class="dialog-title"></h2>
+          <p class="dialog-tagline"></p>
+          <p class="dialog-rating-runtime"></p>
+          <h3>Overview</h3>
+          <p class="dialog-overview"></p>
+          <h3>Description</h3>
+          <p class="dialog-description"></p>
+          <!-- NEW BUTTONS -->
+          <div class="dialog-buttons">
+            <button id="dialogAddWatchlist">Add to Watchlist</button>
+            <button id="dialogMarkWatched">Mark as Watched</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modified: <span id="last-modification"></span></p>
+  </footer>
+
+  <script src="scripts/details-dialog.js"></script>
+  <script src="scripts/foryou.js"></script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/search.js"></script>
+  
+  
+</body>
+</html>

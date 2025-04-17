@@ -1,0 +1,124 @@
+{
+  "action": [
+    {
+      "title": "Explosive Pursuit",
+      "year": "2022",
+      "rating": 7.9,
+      "poster": "images/movie1.jpeg",
+      "tagline": "One chase, endless danger",
+      "runtime": 110,
+      "genre": "Action",
+      "overview": "A rogue agent leads the chase across multiple continents.",
+      "description": "When a top secret device is stolen, an ex-special ops soldier must stop a global threat. High-octane stunts and relentless action scenes."
+    },
+    {
+      "title": "Steel Showdown",
+      "year": "2021",
+      "rating": 7.5,
+      "poster": "images/movie2.webp",
+      "tagline": "Fight for tomorrow",
+      "runtime": 118,
+      "genre": "Action",
+      "overview": "A robotics engineer battles against corruption.",
+      "description": "In a near-future metropolis, underground robot fights draw massive crowds. When the champion robot is sabotaged, a brilliant engineer fights back."
+    }
+  ],
+  "comedy": [
+    {
+      "title": "Fool's Paradise",
+      "year": "2020",
+      "rating": 8.1,
+      "poster": "images/movie3.avif",
+      "tagline": "Every laugh counts",
+      "runtime": 99,
+      "genre": "Comedy",
+      "overview": "Three friends launch a startup with ridiculous results.",
+      "description": "Follow three underdogs who build a quirky, viral company. Misadventures, unexpected fame, and a dose of heartwarming fun."
+    },
+    {
+      "title": "Laugh Riot",
+      "year": "2019",
+      "rating": 7.4,
+      "poster": "images/movie1.jpeg",
+      "tagline": "A stand-up revolution",
+      "runtime": 90,
+      "genre": "Comedy",
+      "overview": "An amateur comedian tries to go pro.",
+      "description": "A small-town open mic night leads to big opportunities, as a comedic underdog navigates stage fright, a tough crowd, and comedic rivals."
+    }
+  ],
+  "drama": [
+    {
+      "title": "In the Shadows",
+      "year": "2018",
+      "rating": 8.2,
+      "poster": "images/movie2.webp",
+      "tagline": "Secrets run deep",
+      "runtime": 105,
+      "genre": "Drama",
+      "overview": "A family secret unravels past loyalties.",
+      "description": "When an estranged sibling returns home, the family’s hidden tragedy resurfaces. Wounds reopen, bonds are tested, and redemption is at stake."
+    }
+  ],
+  "romance": [
+    {
+      "title": "Moonlight Sonata",
+      "year": "2023",
+      "rating": 7.5,
+      "poster": "images/movie3.avif",
+      "tagline": "Love in every note",
+      "runtime": 115,
+      "genre": "Romance",
+      "overview": "Two pianists discover harmony together.",
+      "description": "A world-renowned pianist moves to a small town, meeting a talented local musician. Amid crescendos of heartbreak and hope, true harmony is found."
+    }
+  ],
+  "horror": [
+    {
+      "title": "Silent Screams",
+      "year": "2022",
+      "rating": 6.9,
+      "poster": "images/movie1.jpeg",
+      "tagline": "Fear speaks louder than words",
+      "runtime": 95,
+      "genre": "Horror",
+      "overview": "A remote cabin hides a sinister presence.",
+      "description": "Friends on a weekend getaway find themselves haunted by a menacing force. When night falls, the silence becomes deafening."
+    },
+    {
+      "title": "Haunted Woods",
+      "year": "2021",
+      "rating": 6.6,
+      "poster": "images/movie3.avif",
+      "tagline": "Listen to the whispers",
+      "runtime": 103,
+      "genre": "Horror",
+      "overview": "The forest never forgives intruders.",
+      "description": "A group of thrill-seekers exploring an off-limits forest soon learn that nature harbors dark secrets. Their survival hinges on deciphering eerie voices among the trees."
+    }
+  ],
+  "scifi": [
+    {
+      "title": "Galactic Echoes",
+      "year": "2024",
+      "rating": 8.7,
+      "poster": "images/movie2.webp",
+      "tagline": "The universe is calling",
+      "runtime": 130,
+      "genre": "Sci-Fi",
+      "overview": "An astronaut receives mysterious transmissions from a distant galaxy.",
+      "description": "Deep-space explorers pick up a mysterious signal that may be a warning from beyond our stars. Their journey leads them into the unknown."
+    },
+    {
+      "title": "Cosmic Drift",
+      "year": "2020",
+      "rating": 7.8,
+      "poster": "images/movie3.avif",
+      "tagline": "Boundaries are meant to be broken",
+      "runtime": 122,
+      "genre": "Sci-Fi",
+      "overview": "A malfunction sends a spaceship drifting across the universe.",
+      "description": "A prototype warp engine malfunctions, forcing a stranded crew to navigate uncharted territories and forge alliances with alien civilizations."
+    }
+  ]
+}

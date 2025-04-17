@@ -1,0 +1,79 @@
+/* 1) Card‐Flip Container & Animation */
+.flip-card {
+    perspective: 1000px;
+    width: 180px;
+    height: 270px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & Back Faces */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  .flip-card-front {
+    background-color: #ddd;
+  }
+  .flip-card-back {
+    background-color: #333;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+  
+  /* 2) Fade‑in on load */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .movies-grid .flip-card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* 3) Button transitions */
+  button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 4) Genre tab “pulse” on active */
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(213,31,38,0.7); }
+    70%  { box-shadow: 0 0 0 8px rgba(213,31,38,0); }
+    100% { box-shadow: 0 0 0 0 rgba(213,31,38,0); }
+  }
+  .genre-button.active {
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* 5) Transition on modal dialog */
+  .modal-content {
+    transition: transform 0.3s ease;
+  }
+  .modal-content.show {
+    transform: scale(1.02);
+  }
+  
+  /* 6) Hover shadow on dialog buttons */
+  .dialog-buttons button:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  

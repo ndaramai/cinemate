@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate - Personalized Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate - Personalized Movies">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="for-you.html">For You</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="history.html">History</a>
+      </nav>
+      <div class="search-bar">
+        <input id="homeSearchInput" type="text" placeholder="Search"/>
+        <button id="homeSearchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="discover-section">
+    <h2>Discover</h2>
+    <div class="genre-buttons" id="genreButtons">
+      <button class="genre-button active" data-tab="action">Action</button>
+      <button class="genre-button" data-tab="adventure">Adventure</button>
+      <button class="genre-button" data-tab="animation">Animation</button>
+      <button class="genre-button" data-tab="comedy">Comedy</button>
+      <button class="genre-button" data-tab="crime">Crime</button>
+      <button class="genre-button" data-tab="documentary">Documentary</button>
+      <button class="genre-button" data-tab="drama">Drama</button>
+      <button class="genre-button" data-tab="family">Family</button>
+      <button class="genre-button" data-tab="fantasy">Fantasy</button>
+      <button class="genre-button" data-tab="history">History</button>
+      <button class="genre-button" data-tab="horror">Horror</button>
+      <button class="genre-button" data-tab="music">Music</button>
+      <button class="genre-button" data-tab="mystery">Mystery</button>
+      <button class="genre-button" data-tab="romance">Romance</button>
+      <button class="genre-button" data-tab="scifi">Science Fiction</button>
+      <button class="genre-button" data-tab="tvmovie">TV Movie</button>
+      <button class="genre-button" data-tab="thriller">Thriller</button>
+      <button class="genre-button" data-tab="war">War</button>
+      <button class="genre-button" data-tab="western">Western</button>
+    </div>
+    <div class="tab-container">
+      <div id="action" class="tab-content movies-grid active"></div>
+      <div id="adventure" class="tab-content movies-grid"></div>
+      <div id="animation" class="tab-content movies-grid"></div>
+      <div id="comedy" class="tab-content movies-grid"></div>
+      <div id="crime" class="tab-content movies-grid"></div>
+      <div id="documentary" class="tab-content movies-grid"></div>
+      <div id="drama" class="tab-content movies-grid"></div>
+      <div id="family" class="tab-content movies-grid"></div>
+      <div id="fantasy" class="tab-content movies-grid"></div>
+      <div id="history" class="tab-content movies-grid"></div>
+      <div id="horror" class="tab-content movies-grid"></div>
+      <div id="music" class="tab-content movies-grid"></div>
+      <div id="mystery" class="tab-content movies-grid"></div>
+      <div id="romance" class="tab-content movies-grid"></div>
+      <div id="scifi" class="tab-content movies-grid"></div>
+      <div id="tvmovie" class="tab-content movies-grid"></div>
+      <div id="thriller" class="tab-content movies-grid"></div>
+      <div id="war" class="tab-content movies-grid"></div>
+      <div id="western" class="tab-content movies-grid"></div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="featured-movie-section">
+    <div class="featured-movie-card" id="featuredCard">
+      <div class="featured-poster" id="featuredPoster"></div>
+      <div class="featured-movie-info">
+        <h2 id="featuredTitle">Select a movie</h2>
+        <p class="tagline" id="featuredTagline"></p>
+        <p class="rating-runtime" id="featuredStats"></p>
+        <div class="buttons">
+          <button id="add-watchlist">Add to Watchlist</button>
+          <button id="mark-watched">Mark as Watched</button>
+        </div>
+        <div class="overview-description">
+          <h3>Overview</h3>
+          <p class="overview-text" id="featuredOverview"></p>
+          <h3>Description</h3>
+          <p class="description-text" id="featuredDescription"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      &copy; 2025 CineMate | Design by Ndarama Mark |
+      Last Modification: <span id="last-modification"></span>
+    </p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/search.js"></script>
+
+
+
+</body>
+</html>

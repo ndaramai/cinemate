@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate — Where to Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate — Where to Watch">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate/where-to-watch.html">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/where-to-watch.css">
+  </head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="for-you.html">For You</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="history.html">History</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="where-to-watch-section">
+    <div class="back-button">
+      <a href="javascript:history.back()">&larr; Back</a>
+    </div>
+    
+    <div class="movie-details">
+      <div class="movie-poster">
+        <!-- Poster will be inserted here by JavaScript -->
+      </div>
+      
+      <div class="movie-info">
+        <h1 class="movie-title"><!-- Movie title will be inserted here --></h1>
+        <div class="movie-meta">
+          <!-- Year and rating will be inserted here -->
+        </div>
+        <p class="movie-overview">
+          <!-- Movie overview will be inserted here -->
+        </p>
+      </div>
+    </div>
+    
+    <h2>Where to Watch</h2>
+    
+    <div class="streaming-options">
+      <div class="region-selector">
+        <label for="region">Select your region:</label>
+        <select id="region">
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="GB">United Kingdom</option>
+          <option value="AU">Australia</option>
+          <!-- More regions will be populated dynamically if available -->
+        </select>
+      </div>
+      
+      <div class="providers-container">
+        <div class="loading">
+          Loading streaming options...
+        </div>
+        
+        <!-- Providers will be inserted here by JavaScript -->
+        <div id="stream-providers" class="providers-section">
+          <h3>Stream</h3>
+          <div class="providers-grid"></div>
+        </div>
+        
+        <div id="rent-providers" class="providers-section">
+          <h3>Rent</h3>
+          <div class="providers-grid"></div>
+        </div>
+        
+        <div id="buy-providers" class="providers-section">
+          <h3>Buy</h3>
+          <div class="providers-grid"></div>
+        </div>
+        
+        <div id="no-providers" class="no-providers">
+          <p>No streaming options found for this movie in your selected region.</p>
+          <p>Try selecting a different region or check back later.</p>
+        </div>
+      </div>
+      
+      <div class="theaters-section">
+        <h3>In Theaters</h3>
+        <div id="theaters-info">
+          <!-- Theater information will be inserted here -->
+          <p class="theaters-message">To find showtimes in theaters near you, please check:</p>
+          <div class="theater-links">
+            <a href="https://www.fandango.com" target="_blank" class="theater-link">Fandango</a>
+            <a href="https://www.amctheatres.com" target="_blank" class="theater-link">AMC Theaters</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modified: <span id="last-modification"></span></p>
+  </footer>
+
+  <!-- Where to Watch JavaScript -->
+  <script src="scripts/where-to-watch.js"></script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate -  Watchlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate -  Watchlist">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate/watchlist">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="for-you.html">For You</a>
+        <a href="watchlist.html" class="active">Watchlist</a>
+        <a href="history.html">History</a>
+      </nav>
+      <div class="search-bar">
+        <input id="homeSearchInput" type="text" placeholder="Search"/>
+        <button id="homeSearchBtn">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="watchlist-section">
+    <h2>Your Watchlist</h2>
+    <div id="watchlist-container">
+<div class="watchlist-card" data-id="12345">
+  <div class="movie-poster">
+    <img src="path/to/movie/poster.jpg" alt="Movie title" onerror="this.src='path/to/default/poster.jpg'">
+  </div>
+  <div class="movie-info">
+    <h3 title="Full movie title that might be long">The Full Movie Title That Might Be Longer Than Expected</h3>
+    <p>2023 | ☆ 8.5</p>
+  </div>
+  <button class="remove-btn" title="Remove from Watchlist">×</button>
+  <button class="watch-now-btn">Watch Now</button>
+</div>
+    </div>
+  </section>
+    
+  <footer class="footer">
+    <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modification: <span id="last-modification"></span></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/watchlist.js"></script>
+  <script src="scripts/global-tracking.js"></script>
+  <script src="scripts/search.js"></script>
+</body>
+</html>

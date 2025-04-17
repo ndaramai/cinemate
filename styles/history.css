@@ -1,0 +1,305 @@
+/* History Page Styles */
+
+/* Main section */
+.history-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .history-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  /* Controls container */
+  .history-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  /* Filter dropdown */
+  .history-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .history-filter-container label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .history-filter {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  /* Clear history button */
+  .clear-history-btn {
+    background-color: #D51F26;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .clear-history-btn:hover {
+    background-color: #c31b22;
+    transform: translateY(-2px);
+  }
+  
+  /* History container */
+  .history-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    min-height: 400px;
+  }
+  
+  /* Empty history message */
+  .empty-history {
+    padding: 60px 20px;
+    text-align: center;
+    color: #6c757d;
+  }
+  
+  .empty-history p:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* History list */
+  .history-list {
+    padding: 0;
+  }
+  
+  /* Date group */
+  .history-date-group {
+    margin-bottom: 15px;
+  }
+  
+  .date-heading {
+    padding: 10px 15px;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #555;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* History items list */
+  .history-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* History item */
+  .history-item {
+    display: flex;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+  }
+  
+  .history-item:last-child {
+    border-bottom: none;
+  }
+  
+  .history-item.clickable {
+    cursor: pointer;
+  }
+  
+  .history-item.clickable:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* History item icon */
+  .history-item-icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+  }
+  
+  /* History item content */
+  .history-item-content {
+    flex: 1;
+  }
+  
+  .history-item-title {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #333;
+  }
+  
+  .history-item-details {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .history-item-action {
+    color: #D51F26;
+  }
+  
+  .history-item-time {
+    color: #888;
+  }
+  
+  .history-item-extra {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Custom styling for different action types */
+  .history-item.search .history-item-icon {
+    color: #1565c0;
+  }
+  
+  .history-item.watchlist_add .history-item-icon {
+    color: #2e7d32;
+  }
+  
+  .history-item.watchlist_remove .history-item-icon {
+    color: #c62828;
+  }
+  
+  .history-item.watched .history-item-icon {
+    color: #6a1b9a;
+  }
+  
+  .history-item.unwatched .history-item-icon {
+    color: #ff8f00;
+  }
+  
+  .history-item.details_view .history-item-icon {
+    color: #0277bd;
+  }
+  
+  .history-item.where_to_watch .history-item-icon {
+    color: #00695c;
+  }
+  
+  /* Pagination */
+  .history-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+  
+  .pagination-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+  }
+  
+  .pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    color: #666;
+  }
+  
+  /* Toast notification */
+  #toast-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(213, 31, 38, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .history-controls {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    
+    .history-filter-container {
+      width: 100%;
+    }
+    
+    .history-filter {
+      flex: 1;
+    }
+    
+    .clear-history-btn {
+      width: 100%;
+    }
+    
+    .history-item-details {
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .history-section {
+      padding: 0 10px;
+    }
+    
+    .history-item {
+      padding: 10px;
+    }
+    
+    .history-item-icon {
+      margin-right: 10px;
+    }
+    
+    .date-heading {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+    
+    .pagination-btn {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }

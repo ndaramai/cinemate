@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CineMate - Personalized Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ndarama Mark">
+    <meta name="description" content="Personalized Movie Night App">
+    <meta property="og:title" content="CineMate - Personalized Movies">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https://ndarama.github.io/cinemate">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/details-dialog.css">
+  </head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">CineMate</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="for-you.html">For You</a>
+        <a href="watchlist.html">Watchlist</a>
+        <a href="history.html">History</a>
+        <a href="where-to-watch.html" class="where-to-watch">Where to Watch</a>
+      </nav>
+      <div class="search-container">
+        <form id="search-form" class="search-form">
+          <div class="search-input-group">
+            <input 
+              type="search" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search for movies..."
+              autocomplete="off"
+              aria-label="Search movies"
+            >
+            <button type="submit" id="search-button" class="search-button">
+              <span class="visually-hidden">Search</span>
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <h2>Search Results</h2>
+    
+    <div class="search-controls">
+      <div class="search-term">Results for: <span id="query-display">...</span></div>
+      
+      <button id="filter-toggle" class="filter-toggle">Show Filters</button>
+      
+      <div id="search-filters" class="search-filters">
+        <form class="filter-form">
+          <div class="filter-group">
+            <label for="year-filter">Release Year</label>
+            <input type="number" id="year-filter" min="1900" max="2025" placeholder="e.g. 2023">
+          </div>
+          
+          <div class="filter-group">
+            <label for="genre-filter">Genre</label>
+            <select id="genre-filter">
+              <option value="">All Genres</option>
+              <!-- Will be populated by JavaScript -->
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label for="sort-filter">Sort By</label>
+            <select id="sort-filter">
+              <option value="popularity.desc">Popularity (High to Low)</option>
+              <option value="vote_average.desc">Rating (High to Low)</option>
+              <option value="vote_average.asc">Rating (Low to High)</option>
+              <option value="release_date.desc">Release Date (Newest First)</option>
+              <option value="release_date.asc">Release Date (Oldest First)</option>
+              <option value="original_title.asc">Title (A-Z)</option>
+              <option value="original_title.desc">Title (Z-A)</option>
+            </select>
+          </div>
+          
+          <div class="filter-buttons">
+            <button type="button" id="apply-filters" class="filter-btn apply-btn">Apply Filters</button>
+            <button type="button" id="clear-filters" class="filter-btn clear-btn">Clear Filters</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div id="search-results" class="movies-grid">
+      <!-- Results will be populated here by JavaScript -->
+      <div class="no-results">Enter a search term to find movies</div>
+    </div>
+    
+    <div class="load-more-container">
+      <button id="load-more" class="load-more-btn" style="display: none;">Load More Results</button>
+    </div>
+  </section>
+
+  <!-- Movie Details Modal Dialog -->
+  <div id="movieDialog" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="close">&times;</span>
+      <div class="modal-body">
+        <div class="dialog-poster"></div>
+        <div class="dialog-info">
+          <h2 class="dialog-title"></h2>
+          <p class="dialog-tagline"></p>
+          <p class="dialog-rating-runtime"></p>
+          <h3>Overview</h3>
+          <p class="dialog-overview"></p>
+          <h3>Description</h3>
+          <p class="dialog-description"></p>
+          <div class="dialog-buttons">
+            <button id="dialogAddWatchlist">Add to Watchlist</button>
+            <button id="dialogMarkWatched">Mark as Watched</button>
+            <button id="dialogWhereToWatch">Where to Watch</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CineMate | Design by Ndarama Mark | Last Modified: <span id="last-modification"></span></p>
+  </footer>
+
+
+  <script src="scripts/tmdb-api.js"></script>
+  <script src="scripts/details-dialog.js"></script>
+  <script src="scripts/search.js"></script>
+
+</body>
+</html>
